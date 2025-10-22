@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 386393094227166269}
   - component: {fileID: 6635374887258890753}
   - component: {fileID: 8644030149997628701}
+  - component: {fileID: 2402524900062211759}
   m_Layer: 0
   m_Name: LibraryTable
   m_TagString: Untagged
@@ -63,11 +64,23 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2338827627830747607}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf3423d5c0c1ea746b434f9ad1fcaa49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStudy
+--- !u!114 &2402524900062211759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2338827627830747607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07587d4c223455e4cbb181b33940fbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TableInteractable
 --- !u!1001 &6727549939954951694
 PrefabInstance:
   m_ObjectHideFlags: 0

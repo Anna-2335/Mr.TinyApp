@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class ChairInteraction : MonoBehaviour
 {
-
+    /*
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -12,7 +12,7 @@ public class ChairInteraction : MonoBehaviour
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider collider in colliderArray)
             {
-                Debug.Log("Interact");
+               // Debug.Log("Interact");
 
                 //if(collider.TryGetComponent(out ChairInteractable chairInteractable))
                 //{
@@ -22,4 +22,5 @@ public class ChairInteraction : MonoBehaviour
         }
        
     }
+    */
 }  
