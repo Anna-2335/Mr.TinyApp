@@ -8,6 +8,9 @@ public class ChatBubble : MonoBehaviour
     private SpriteRenderer backgroundSpriteRenderer;
     private SpriteRenderer iconSpriteRenderer;
     private TextMeshPro textMeshPro;
+    
+  
+    
     private void Awake()
     {
         backgroundSpriteRenderer= transform.Find("Background").GetComponent<SpriteRenderer>();
