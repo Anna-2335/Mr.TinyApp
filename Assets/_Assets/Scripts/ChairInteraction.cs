@@ -12,10 +12,12 @@ public class ChairInteraction : MonoBehaviour
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider collider in colliderArray)
             {
-                if(collider.TryGetComponent(out ChairInteractable chairInteractable))
-                {
-                    chairInteractable.Interact();
-                }
+                Debug.Log("Interact");
+
+                //if(collider.TryGetComponent(out ChairInteractable chairInteractable))
+                //{
+                //    chairInteractable.Interact();
+                // }
             }
         }
        
