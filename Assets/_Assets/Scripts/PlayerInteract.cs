@@ -18,6 +18,14 @@ public class PlayerInteract : MonoBehaviour
 
                    npcInteractable.Interact();
                 }
+                // Check tables
+                TableInteractable table = collider.GetComponentInParent<TableInteractable>();
+                if (table != null)
+                {
+                    table.OnClick();
+                    Debug.Log("ITS TABLE");
+                    return; // only interact with one object per press
+                }
             }
         }
     }
