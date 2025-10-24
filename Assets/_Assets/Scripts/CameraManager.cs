@@ -4,6 +4,7 @@ using Unity.Cinemachine;
 
 public class CameraManager : MonoBehaviour
 {
+    //referenced GPT
     public static CameraManager Instance;
 
     [SerializeField] private CinemachineCamera vcam;
@@ -15,6 +16,7 @@ public class CameraManager : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+        Debug.Log("Awaken");
     }
 
     private void Start()
@@ -27,7 +29,7 @@ public class CameraManager : MonoBehaviour
     {
         if (vcam == null || target == null) return;
 
-        // Modern way: set Follow and LookAt
+        // MFollow and LookAt
         vcam.Follow = target;
         vcam.LookAt = target;
     }

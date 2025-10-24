@@ -19,6 +19,8 @@ public class PlayerInteract : MonoBehaviour
                    npcInteractable.Interact();
                 }
                 // Check tables
+                //referencwwed GPT
+
                 TableInteractable table = collider.GetComponentInParent<TableInteractable>();
                 if (table != null)
                 {
@@ -44,6 +46,7 @@ public class PlayerInteract : MonoBehaviour
             }
         }
 
+            //helps to determine which E interact is closer (if there were many interactable)
         NPCInteractable closestNPCInteractable = null; 
         foreach (NPCInteractable npcInteractable in npcInteractableList)
         {

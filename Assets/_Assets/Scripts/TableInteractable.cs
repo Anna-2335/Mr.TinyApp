@@ -4,6 +4,7 @@ public class TableInteractable : MonoBehaviour
 {
 
     public Transform FocusPoint;
+    //referenced GPT
 
     private void Awake()
     {
