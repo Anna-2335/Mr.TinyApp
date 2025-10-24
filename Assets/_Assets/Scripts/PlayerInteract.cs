@@ -4,12 +4,12 @@ using System.Collections.Generic;
 
 public class PlayerInteract : MonoBehaviour
 {
-
+    [SerializeField] private Transform _TextPosition;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            float interactRange = 4f;
+            float interactRange = 2f;
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach (Collider collider in colliderArray)
             {
@@ -29,6 +29,10 @@ public class PlayerInteract : MonoBehaviour
                     return; // only interact with one object per press
                 }
             }
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            FindFirstObjectByType<CameraManager>().SwitchToPlayer();
         }
     }
     

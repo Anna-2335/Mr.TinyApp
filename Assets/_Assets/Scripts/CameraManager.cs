@@ -4,39 +4,24 @@ using Unity.Cinemachine;
 
 public class CameraManager : MonoBehaviour
 {
-    //referenced GPT
-    public static CameraManager Instance;
+    //referenced GPT handles switching between interacting scenes
 
-    [SerializeField] private CinemachineCamera vcam;
-    [SerializeField] private Transform playerTransform;
-
-    private Transform currentTarget;
-
-    private void Awake()
+    public CinemachineCamera playerCam;
+    public CinemachineCamera tableCam;
+    public void SwitchToTable()
     {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
-        Debug.Log("Awaken");
+        playerCam.Priority = 10;
+        tableCam.Priority = 20;
+        Debug.Log("Switched to Table Camera");
     }
 
-    private void Start()
+
+    public void SwitchToPlayer()
     {
-        // default follow/look to player
-        SetTarget(playerTransform);
+        playerCam.Priority = 20;
+        tableCam.Priority = 10;
+        Debug.Log("Switched back to Player Camera");
     }
 
-    public void SetTarget(Transform target)
-    {
-        if (vcam == null || target == null) return;
-
-        // MFollow and LookAt
-        vcam.Follow = target;
-        vcam.LookAt = target;
-    }
-
-    public void ResetToPlayer()
-    {
-        SetTarget(playerTransform);
-    }
 }
 

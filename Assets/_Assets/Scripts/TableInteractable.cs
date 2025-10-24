@@ -3,20 +3,20 @@ using UnityEngine;
 public class TableInteractable : MonoBehaviour
 {
 
-    public Transform FocusPoint;
+    private CameraManager cameraManager;
     //referenced GPT
 
-    private void Awake()
+    private void Start()
     {
-        if (FocusPoint == null)
-            FocusPoint = transform.Find("FocusPoint");
-
+        cameraManager = FindFirstObjectByType<CameraManager>();
     }
 
     public void OnClick()
     {
-        if (FocusPoint != null)
-            CameraManager.Instance.SetTarget(FocusPoint);
-        Debug.Log("detecting");
+        Debug.Log("Table clicked!");
+        if (cameraManager != null)
+        {
+            cameraManager.SwitchToTable();
+        }
     }
     }

@@ -3,6 +3,7 @@ using UnityEngine;
 public class NPCInteractable : MonoBehaviour
 {
     [SerializeField] private string interactText;
+
     public void Interact()
     {
         Debug.Log("INTERACT");
