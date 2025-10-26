@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TableInteractable : MonoBehaviour
 {
+    [SerializeField] private Transform focusPoint;
 
     private CameraManager cameraManager;
     //referenced GPT
@@ -13,10 +14,9 @@ public class TableInteractable : MonoBehaviour
 
     public void OnClick()
     {
-        Debug.Log("Table clicked!");
-        if (cameraManager != null)
+        if (cameraManager != null && focusPoint != null)
         {
-            cameraManager.SwitchToTable();
+            cameraManager.SwitchToTable(focusPoint);
         }
     }
     }

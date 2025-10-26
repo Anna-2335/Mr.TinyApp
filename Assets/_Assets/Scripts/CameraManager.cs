@@ -4,12 +4,15 @@ using Unity.Cinemachine;
 
 public class CameraManager : MonoBehaviour
 {
-    //referenced GPT handles switching between interacting scenes
+    //handles switching between interacting to tables
 
     public CinemachineCamera playerCam;
     public CinemachineCamera tableCam;
-    public void SwitchToTable()
+    public void SwitchToTable(Transform tableFocus)
     {
+
+      //  tableCam.TrackingTarget = tableFocus;
+
         playerCam.Priority = 10;
         tableCam.Priority = 20;
         Debug.Log("Switched to Table Camera");
